@@ -1,6 +1,7 @@
 var cart = [];
 var total = 0;
 var quantity = 0;
+var count=0;
 
 document.getElementById("cart").addEventListener("click", () => {
   cart.forEach(function (item) {
@@ -24,6 +25,8 @@ for (let i = 0; i < btn_cart.length; i++) {
 }
 
 function addToCart(target) {
+    count=count+1;
+document.getElementById("cart-value").innerHTML=count
   var closest = target.closest("div[id]");
   var id = closest.id;
   var element = document.getElementById(id);
